@@ -36,7 +36,7 @@
             public function arr(){
                 for ($i = 1; $i <= $this->treeCount; $i++)
                 {
-                    $garden["tree №".$i] =  rand(10,20)."</br>";
+                    $garden["tree №".$i] =  rand(40,50)."</br>";
                 }
                 print_r($garden);
                 echo "</br> Количество собранных яблок с ".$this->treeCount.$this->tree().array_sum($garden)." яблок</br>";
@@ -69,7 +69,7 @@
             public function arr(){
                 for ($i = 1; $i <= $this->treeCount; $i++)
                 {
-                    $garden["tree №".$i] =  rand(10,20)."</br>";
+                    $garden["tree №".$i] =  rand(0,20)."</br>";
                 }
                 print_r($garden)."</br>";
                 echo "</br> Количество собранных груш с ".$this->treeCount.$this->tree().array_sum($garden)." груш</br>";

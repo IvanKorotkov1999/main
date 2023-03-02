@@ -9,20 +9,20 @@
 <body>
     
     <?php 
+
+
         class Apple{
-            public $col;
-            public $a = [];
-            public $s ;
-            public function __construct($col, $s)
+            public $treeCount;
+            public $garden = [];
+            public function __construct($treeCount)
             {
-                $this->col=$col;
-                $this->s=$s;
+                $this->treeCount=$treeCount;
             }
 
             // Проверка на множественное число
 
             public  function tree(){
-                if ($this->col == 1){
+                if ($this->treeCount == 1){
                     return " дерева: ";
                 } else{
                     return " деревьев: ";
@@ -34,30 +34,28 @@
              Дальше суммирование их с помощью функции.*/
 
             public function arr(){
-                for ($i = 1; $i <= $this->col; $i++)
+                for ($i = 1; $i <= $this->treeCount; $i++)
                 {
-                    $a["tree №".$i] = $this->s."</br>";
+                    $garden["tree №".$i] =  rand(10,20)."</br>";
                 }
-                print_r($a);
-                echo "</br> Количество собранных яблок с ".$this->col.$this->tree().array_sum($a)." яблок</br>";
+                print_r($garden);
+                echo "</br> Количество собранных яблок с ".$this->treeCount.$this->tree().array_sum($garden)." яблок</br>";
             }
             
             
         }
         class Pear{
-            public $col;
-            public $a = [];
-            public $s ;
-            public function __construct($col, $s)
+            public $treeCount;
+            public $garden = [];
+            public function __construct($treeCount )
             {
-                $this->col=$col;
-                $this->s=$s;
+                $this->treeCount=$treeCount;
             }
 
             // Проверка на множественное число
 
             public  function tree(){
-                if ($this->col == 1){
+                if ($this->treeCount == 1){
                     return " дерева: ";
                 } else{
                     return " деревьев: ";
@@ -69,19 +67,19 @@
              Дальше суммирование их с помощью функции.*/
 
             public function arr(){
-                for ($i = 1; $i <= $this->col; $i++)
+                for ($i = 1; $i <= $this->treeCount; $i++)
                 {
-                    $a["tree №".$i] = $this->s."</br>";
+                    $garden["tree №".$i] =  rand(10,20)."</br>";
                 }
-                print_r($a)."</br>";
-                echo "</br> Количество собранных груш с ".$this->col.$this->tree().array_sum($a)." груш</br>";
+                print_r($garden)."</br>";
+                echo "</br> Количество собранных груш с ".$this->treeCount.$this->tree().array_sum($garden)." груш</br>";
             }
         }
 
         // здесь заполняется количество деревьев и выпавших плодов
-        $ap = new Apple(1, rand(40,50));
-        $ap->arr() ;
-        $pe = new Pear(4, rand(10,20));
+        $gardenp = new Apple(3);
+        $gardenp->arr() ;
+        $pe = new Pear(4);
         $pe->arr() ;
     ?>
 </body>
